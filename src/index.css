@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-dark-200 dark:text-gray-100 transition-colors duration-300;
+    font-feature-settings: "ss01", "ss03", "cv01", "cv03";
+  }
+  
+  ::selection {
+    @apply bg-primary-500/20 text-primary-600 dark:text-primary-400;
+  }
+}
+
+@layer components {
+  .heading {
+    @apply font-bold tracking-tight;
+  }
+  
+  .container-wrapper {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-10;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-12 text-center;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent;
+  }
+  
+  .button-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-md font-medium transition-all;
+  }
+  
+  .button-secondary {
+    @apply bg-transparent border border-primary-600 text-primary-600 hover:bg-primary-600/5 px-6 py-3 rounded-md font-medium transition-all;
+  }
+}
+
+.animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cursor-glow {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(14, 165, 233, 0.3);
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.dark .preloader {
+  background-color: #181A1E;
+}
+
+.preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: theme('colors.primary.500');
+  transition: width 0.3s;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.blur-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.blur-image-container .blur-overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(80px);
+  opacity: 0.8;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes shootingStar {
+  0% {
+    transform: translateX(0) translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(300px) translateY(300px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 5s infinite;
+}
+
+.animate-shootingStar {
+  animation: shootingStar 3s infinite;
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+}
