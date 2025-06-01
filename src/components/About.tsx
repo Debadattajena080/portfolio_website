@@ -35,14 +35,14 @@ const skills = [
     title: "Web Development",
     description:
       "Crafting blazing-fast, SEO-optimized web apps with React, Next.js, and cutting-edge frameworks for seamless user experiences.",
-    color: "primary",
+    color: "gradient",
   },
   {
     icon: <Palette size={24} />,
     title: "UI/UX Design",
     description:
       "Designing pixel-perfect interfaces with intuitive workflows that delight users and boost conversion rates.",
-    color: "secondary",
+    color: "gradient",
   },
   {
     icon: <Sparkles size={24} />,
@@ -56,14 +56,14 @@ const skills = [
     title: "Continuous Learning",
     description:
       "Mastering emerging technologies to build future-proof solutions with modern best practices.",
-    color: "accent",
+    color: "gradient",
   },
   {
     icon: <Users size={24} />,
     title: "Team Collaboration",
     description:
       "Leading cross-functional teams to transform ideas into high-impact digital products efficiently.",
-    color: "primary",
+    color: "gradient",
   },
 ];
 const About: React.FC = () => {
@@ -163,7 +163,7 @@ const About: React.FC = () => {
             transitionDuration={300}
             containerClass="carousel-container"
             removeArrowOnDeviceType={["mobile"]}
-            itemClass=" py-8"
+            itemClass=" md:px-4 py-8"
             arrows={false}
             renderButtonGroupOutside={true}
             showDots={true}
