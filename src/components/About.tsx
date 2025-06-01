@@ -163,7 +163,7 @@ const About: React.FC = () => {
             transitionDuration={300}
             containerClass="carousel-container"
             removeArrowOnDeviceType={["mobile"]}
-            itemClass="px-4 py-8"
+            itemClass=" py-8"
             arrows={false}
             renderButtonGroupOutside={true}
             showDots={true}
