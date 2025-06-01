@@ -26,17 +26,6 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop - 100,
-        behavior: "smooth",
-      });
-    }
-    setIsOpen(false);
-  };
-
   const navbarVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -161,7 +150,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
 
       {/* Mobile Menu */}
       <motion.div
-        className={`fixed inset-y-0 right-0 w-64 bg-white dark:bg-dark-100 shadow-xl p-8 flex flex-col md:hidden transition-transform ${
+         className={`absolute top-0 right-0 w-64 min-h-full bg-dark-100 !important shadow-xl p-8 flex flex-col md:hidden z-50 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         initial="closed"
@@ -183,7 +172,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             className="nav-link text-lg"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("about");
+              document
+                .getElementById("about")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             About
@@ -193,7 +184,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             className="nav-link text-lg"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("projects");
+              document
+                .getElementById("projects")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Projects
@@ -203,7 +196,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             className="nav-link text-lg"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("skills");
+              document
+                .getElementById("skills")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Skills
@@ -213,7 +208,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             className="nav-link text-lg"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("experience");
+              document
+                .getElementById("experience")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Experience
@@ -223,7 +220,9 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
             className="nav-link text-lg"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection("contact");
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Contact

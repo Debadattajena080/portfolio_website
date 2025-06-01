@@ -16,35 +16,35 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "CEO",
-    company: "TechStart Inc.",
+    name: "Praveen Kumar Burra",
+    role: "@Co-Founder & CIO, AiSPRY",
+    company: "Aispry",
     image:
       "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600",
     content:
-      "Working with Golam was an absolute pleasure. His attention to detail and technical expertise transformed our website into something truly special. The results exceeded our expectations!",
+      "Working with Debadatta was an absolute pleasure. His attention to detail and technical expertise transformed our website into something truly special. The results exceeded our expectations!",
     rating: 5,
   },
   {
     id: 2,
-    name: "Michael Chen",
-    role: "Product Manager",
-    company: "InnovateLabs",
+    name: "Monish Kumar",
+    role: "Team Lead, Fullstack Developer",
+    company: "@Elite Concept Pvt. Ltd",
     image:
       "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=600",
     content:
-      "Golam's ability to understand our requirements and translate them into a beautiful, functional website was impressive. His technical skills and creativity made our project a huge success.",
+      "Debadatta's ability to understand our requirements and translate them into a beautiful, functional website was impressive. His technical skills and creativity made our project a huge success.",
     rating: 5,
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
-    role: "Marketing Director",
-    company: "CreativeFlow",
+    name: "Bijay Kumar Sahoo",
+    role: "Fullstack Developer",
+    company: "@Deloitte USI",
     image:
       "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=600",
     content:
-      "The website Golam created for us perfectly captures our brand essence. His expertise in both design and development resulted in a seamless, engaging user experience.",
+      "Having known Debadatta since our college days, I've always admired his approach to development. He combines technical precision with thoughtful design, delivering solutions that are both robust and user-friendly. His work consistently demonstrates clean architecture and attention to detail.",
     rating: 5,
   },
 ];
@@ -79,7 +79,7 @@ const Testimonials: React.FC = () => {
     <section className="section " id="testimonials">
       <div className="container-wrapper">
         <h2 className="section-title">
-           <span className="gradient-text">Testimonials</span>
+          <span className="gradient-text">Testimonials</span>
         </h2>
 
         <motion.div
@@ -100,11 +100,11 @@ const Testimonials: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-4 mb-4">
-                <img
+                {/* <img
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-16 h-16 rounded-full object-cover"
-                />
+                /> */}
                 <div>
                   <h3 className="font-semibold text-lg">{testimonial.name}</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">

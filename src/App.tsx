@@ -94,7 +94,7 @@ function App() {
       {isLoading ? <Preloader /> : null}
       <CustomCursor />
 
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col overflow-hidden">
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
         <main>
