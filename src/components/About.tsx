@@ -143,7 +143,7 @@ const About: React.FC = () => {
             </p>
 
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/176HbWvOEZrlAXO0hmQNpBswg32niuE5k/view?usp=sharing"
               className="button-primary flex items-center gap-2 w-fit"
             >
               Download Resume

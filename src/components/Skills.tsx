@@ -97,7 +97,7 @@ const SkillsCarousel: React.FC = () => {
             {duplicatedSkills.map((skill, index) => (
               <motion.div
                 key={`${skill.name}-${index}`}
-                className="flex-shrink-0 w-40 h-40 flex flex-col items-center justify-center dark:bg-dark-700/70 backdrop-blur-md rounded-2xl p-6 border border-white/30 dark:border-dark-600/30 shadow-lg hover:shadow-xl transition-all"
+                className="flex-shrink-0 w-40 h-40 flex flex-col items-center justify-center dark:bg-dark-700/70 backdrop-blur-lg rounded-2xl p-6 border border-white/30 dark:border-dark-600/30 shadow-lg hover:shadow-xl transition-all"
                 whileHover={{
                   y: -10,
                   scale: 1.05,
@@ -109,7 +109,7 @@ const SkillsCarousel: React.FC = () => {
                 viewport={{ once: true, margin: "0px 0px -100px 0px" }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
               >
-                <div className="w-24 h-24 mb-4 flex items-center justify-center rounded-xl  dark:bg-dark-800 p-3 shadow-inner">
+                <div className="w-24 h-24 mb-4 flex items-center justify-center rounded-xl  dark:bg-dark-900 p-3 shadow-inner ">
                   <img
                     src={skill.logo}
                     alt={skill.name}
@@ -124,7 +124,7 @@ const SkillsCarousel: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Category indicators */}
+    
       </div>
     </section>
   );
