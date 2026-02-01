@@ -125,18 +125,18 @@ const About: React.FC = () => {
             <h3 className="text-2xl font-bold mb-4">
               Web Developer & UI/UX Designer
             </h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-6">
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
               Hello! I'm Debadatta Jena, a passionate Web Developer and UI/UX
               Designer with 3+ years of experience creating beautiful,
               functional websites and applications.
             </p>
-            <p className="text-gray-700 dark:text-gray-300 mb-6">
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
               I specialize in building modern web applications using React,
               Next.js, and TypeScript. My approach combines technical expertise
               with creative design thinking to deliver exceptional user
               experiences.
             </p>
-            <p className="text-gray-700 dark:text-gray-300 mb-8">
+            <p className="text-gray-600 dark:text-gray-400 mb-8">
               When I'm not coding, you'll find me exploring new design trends,
               contributing to open source projects, or sharing my knowledge
               through blog posts and mentoring.
@@ -178,7 +178,7 @@ const About: React.FC = () => {
                 viewport={{ once: true }}
               >
                 <motion.div
-                  className={`h-full bg-white/30 dark:bg-dark-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group
+                  className={`h-full border border-white dark:border-dark-100 dark:bg-dark-100 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group
                 ${
                   skill.color === "gradient"
                     ? "border border-transparent"
@@ -225,10 +225,10 @@ const About: React.FC = () => {
                       {skill.icon}
                     </div>
 
-                    <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white">
+                    <h3 className="text-xl font-bold mb-3 text-gray-400 dark:text-white">
                       {skill.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300">
+                    <p className="text-gray-400 dark:text-gray-300">
                       {skill.description}
                     </p>
 

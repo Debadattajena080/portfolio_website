@@ -61,9 +61,9 @@ const timelineItems: TimelineItem[] = [
 ];
 
 const stats = [
-  { value: "6000+", label: "Working Hours" },
+  { value: "7500+", label: "Working Hours" },
   { value: "15+", label: "Total projects" },
-  { value: "3+", label: "Years Journey" },
+  { value: "3.5+", label: "Years Journey" },
 ];
 
 const Experience: React.FC = () => {
@@ -138,7 +138,7 @@ const Experience: React.FC = () => {
         >
           {/* Left Column - Bio Details (slides from left) */}
           <motion.div
-            className="bg-white/30 dark:bg-dark-100 p-6 lg:p-8 rounded-xl shadow-lg "
+            className=" dark:bg-dark-100 p-6 lg:p-8 rounded-xl shadow-lg border border-gray-100 dark:border-dark-100"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{
@@ -149,19 +149,19 @@ const Experience: React.FC = () => {
             }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <div className="mb-6">
+            <div className="mb-6 ">
               <div className="flex justify-between items-end mb-6">
                 <div>
                   <motion.h2
-                    className="text-3xl font-bold mb-2 text-gray-800 dark:text-white"
+                    className="text-3xl font-bold mb-2 text-gray-400 dark:text-white  "
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.2 }}
                   >
-                    3+ Years of Experience
+                    3.5+ Years of Experience
                   </motion.h2>
                   <motion.h4
-                    className="text-xl text-gray-500 dark:text-gray-300"
+                    className="text-xl text-gray-400 dark:text-gray-300"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: 0.3 }}
@@ -176,7 +176,7 @@ const Experience: React.FC = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                <h3 className="text-2xl font-bold mb-2 text-gray-800 dark:text-white">
+                <h3 className="text-2xl font-bold mb-2 text-gray-400 dark:text-white">
                   Debadatta Jena
                 </h3>
                 <p className="text-primary-600  italic">
@@ -185,7 +185,7 @@ const Experience: React.FC = () => {
               </motion.div>
 
               <motion.p
-                className="text-gray-600 dark:text-gray-300 my-6 leading-relaxed"
+                className="text-gray-400 dark:text-gray-300 my-6 leading-relaxed"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
@@ -252,7 +252,7 @@ const Experience: React.FC = () => {
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white/30 dark:bg-dark-100 p-4 md:p-4 rounded-xl shadow-lg border border-gray-100 dark:border-dark-100 "
+                  className=" dark:bg-dark-100 p-4 md:p-4 rounded-xl shadow-lg border border-white dark:border-white "
                   initial={{ y: 50, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{
@@ -315,8 +315,8 @@ const Experience: React.FC = () => {
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: 0.3 }}
-                          className={`bg-white/30 dark:bg-dark-100 backdrop-blur-lg p-6 rounded-2xl shadow-md border
-                        border-white/20 dark:border-dark-100/20 transition-all duration-300 hover:shadow-lg
+                          className={` dark:bg-dark-100 backdrop-blur-lg p-6 rounded-2xl shadow-md border
+                        border-white dark:border-dark-100/20 transition-all duration-300 hover:shadow-lg
                         min-h-[300px] mx-auto max-w-3xl
                       `}
                         >
@@ -327,7 +327,7 @@ const Experience: React.FC = () => {
                             className={`inline-block px-3 py-1 text-xs font-medium rounded-full mb-4 tracking-wide uppercase
                           ${
                             item.type === "work"
-                              ? "bg-primary-100/40 dark:bg-primary-800/20 text-primary-700 dark:text-primary-300"
+                              ? " text-primary-700 dark:text-primary-300"
                               : "bg-secondary-100/40 dark:bg-secondary-800/20 text-secondary-700 dark:text-secondary-300"
                           }
                         `}
@@ -339,7 +339,7 @@ const Experience: React.FC = () => {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.5 }}
-                            className="text-xl font-semibold text-gray-800 dark:text-white mb-1"
+                            className="text-xl font-semibold text-gray-400 dark:text-white mb-1"
                           >
                             {item.title}
                           </motion.h3>
@@ -348,7 +348,7 @@ const Experience: React.FC = () => {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.6 }}
-                            className="text-lg font-medium text-gray-600 dark:text-gray-300 mb-3"
+                            className="text-lg font-medium text-gray-400 dark:text-gray-300 mb-3"
                           >
                             {item.organization}
                           </motion.h4>
@@ -357,7 +357,7 @@ const Experience: React.FC = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.7 }}
-                            className="text-sm text-gray-700 dark:text-gray-400 leading-relaxed whitespace-pre-line"
+                            className="text-sm text-gray-400 dark:text-gray-400 leading-relaxed whitespace-pre-line"
                           >
                             {item.description}
                           </motion.p>

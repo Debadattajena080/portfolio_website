@@ -40,7 +40,13 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "py-4 bg-white/90 dark:bg-dark-200/90 backdrop-blur-sm shadow-sm"
+          ? `
+      py-4
+      bg-white/20 dark:bg-dark-200/50
+      backdrop-blur-md
+      border-b border-white/30 dark:border-white/90
+      shadow-[0_8px_32px_rgba(0,0,0,0.08)]
+    `
           : "py-6 bg-transparent"
       }`}
     >
@@ -150,7 +156,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
 
       {/* Mobile Menu */}
       <motion.div
-         className={`absolute top-0 right-0 w-64 min-h-full bg-dark-100 !important shadow-xl p-8 flex flex-col md:hidden z-50 ${
+        className={`absolute top-0 right-0 w-64 min-h-full bg-dark-100 !important shadow-xl p-8 flex flex-col md:hidden z-50 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         initial="closed"

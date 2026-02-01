@@ -16,7 +16,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Praveen Kumar Burra",
+    name: "Praveen ",
     role: "Co-Founder & CIO, AiSPRY",
     company: "@Aispry",
     image:
@@ -29,7 +29,7 @@ const testimonials: Testimonial[] = [
     id: 2,
     name: "Monish Kumar",
     role: "Team Lead, Fullstack Developer",
-    company: "@Elite Concept Pvt. Ltd",
+    company: "@Stratovision Solutions Pvt. Ltd",
     image:
       "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=600",
     content:
