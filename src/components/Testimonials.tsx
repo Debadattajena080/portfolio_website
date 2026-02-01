@@ -17,8 +17,8 @@ const testimonials: Testimonial[] = [
   {
     id: 1,
     name: "Praveen Kumar Burra",
-    role: "@Co-Founder & CIO, AiSPRY",
-    company: "Aispry",
+    role: "Co-Founder & CIO, AiSPRY",
+    company: "@Aispry",
     image:
       "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600",
     content:
@@ -108,7 +108,7 @@ const Testimonials: React.FC = () => {
                 <div>
                   <h3 className="font-semibold text-lg">{testimonial.name}</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    {testimonial.role} at {testimonial.company}
+                    {testimonial.role}  {testimonial.company}
                   </p>
                 </div>
               </div>

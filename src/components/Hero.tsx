@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { Github, Linkedin, Mail } from "lucide-react";
 import myImage from "../assets/myImage.jpg";
+import SplitText from "./SplitText";
+import ElectricBorder from "./ElectricBorder";
+import DotGrid from "./DotGrid";
+import TextPressure from './TextPressure';
 
 const Hero: React.FC = () => {
   const containerVariants = {
@@ -26,42 +30,46 @@ const Hero: React.FC = () => {
   };
 
   // Generate random stars
-  const generateStars = (count: number) => {
-    return Array.from({ length: count }).map((_, i) => {
-      const style = {
-        top: `${Math.random() * 100}%`,
-        left: `${Math.random() * 100}%`,
-        width: `${Math.random() * 3 + 1}px`,
-        height: `${Math.random() * 3 + 1}px`,
-        opacity: Math.random() * 0.5 + 0.5,
-        animationDelay: `${Math.random() * 5}s`,
-      };
-      return (
-        <div
-          key={i}
-          className="absolute bg-white rounded-full animate-twinkle"
-          style={style}
-        />
-      );
-    });
-  };
+  // const generateStars = (count: number) => {
+  //   return Array.from({ length: count }).map((_, i) => {
+  //     const style = {
+  //       top: `${Math.random() * 100}%`,
+  //       left: `${Math.random() * 100}%`,
+  //       width: `${Math.random() * 3 + 1}px`,
+  //       height: `${Math.random() * 3 + 1}px`,
+  //       opacity: Math.random() * 0.5 + 0.5,
+  //       animationDelay: `${Math.random() * 5}s`,
+  //     };
+  //     return (
+  //       <div
+  //         key={i}
+  //         className="absolute bg-white rounded-full animate-twinkle"
+  //         style={style}
+  //       />
+  //     );
+  //   });
+  // };
 
   // Generate shooting stars
-  const generateShootingStars = (count: number) => {
-    return Array.from({ length: count }).map((_, i) => {
-      const style = {
-        top: `${Math.random() * 30}%`,
-        left: `${Math.random() * 100}%`,
-        animationDelay: `${Math.random() * 10}s`,
-      };
-      return (
-        <div
-          key={`shooting-${i}`}
-          className="absolute h-0.5 w-20 bg-gradient-to-r from-transparent via-white to-transparent animate-shootingStar"
-          style={style}
-        />
-      );
-    });
+  // const generateShootingStars = (count: number) => {
+  //   return Array.from({ length: count }).map((_, i) => {
+  //     const style = {
+  //       top: `${Math.random() * 30}%`,
+  //       left: `${Math.random() * 100}%`,
+  //       animationDelay: `${Math.random() * 10}s`,
+  //     };
+  //     return (
+  //       <div
+  //         key={`shooting-${i}`}
+  //         className="absolute h-0.5 w-20 bg-gradient-to-r from-transparent via-white to-transparent animate-shootingStar"
+  //         style={style}
+  //       />
+  //     );
+  //   });
+  // };
+
+  const handleAnimationComplete = () => {
+    console.log("All letters have animated!");
   };
 
   return (
@@ -71,8 +79,19 @@ const Hero: React.FC = () => {
     >
       {/* Starry background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {generateStars(100)}
-        {generateShootingStars(3)}
+        {/* {generateStars(100)}
+        {generateShootingStars(3)} */}
+        {/* <DotGrid
+          dotSize={5}
+          gap={15}
+          baseColor="#271E37"
+          activeColor="#5227FF"
+          proximity={120}
+          shockRadius={250}
+          shockStrength={5}
+          resistance={750}
+          returnDuration={1.5}
+        /> */}
       </div>
 
       <div className="container-wrapper relative z-10">
@@ -92,10 +111,40 @@ const Hero: React.FC = () => {
               className="w-44 h-44 rounded-full object-contain"
             />
           </motion.div>
+          {/* <SplitText
+            text="Hello, you!"
+            className="text-2xl font-semibold text-center"
+            delay={50}
+            duration={1.25}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="center"
+            onLetterAnimationComplete={handleAnimationComplete}
+            showCallback
+          /> */}
 
           <motion.div variants={itemVariants}>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              Hi, I'm <span className="gradient-text">DEBADATTA JENA</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 flex items-center justify-center">
+              Hi, I'm Debadatta Jena
+              <span className="gradient-text">
+                
+                {/* <TextPressure
+                  text="DEBADATTA JENA"
+                  flex
+                  alpha={false}
+                  stroke={false}
+                  width
+                  weight
+                  italic
+                  textColor="#ffffff"
+                  strokeColor="#5227FF"
+                  minFontSize={36}
+                /> */}
+              </span>
             </h1>
           </motion.div>
 
@@ -103,6 +152,8 @@ const Hero: React.FC = () => {
             <TypeAnimation
               sequence={[
                 "Web Developer",
+                2000,
+                "AI Automation Engineer",
                 2000,
                 "UI/UX Designer",
                 2000,

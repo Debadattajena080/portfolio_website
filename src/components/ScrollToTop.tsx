@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowUp, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { BubbleChat } from "flowise-embed-react";
 
 const ScrollToTop = () => {
   const [showArrow, setShowArrow] = useState(false);
@@ -21,7 +22,8 @@ const ScrollToTop = () => {
   return (
     <div className="fixed bottom-6 right-6 flex flex-col items-end gap-4 z-50">
       {/* WhatsApp Button (Always Visible) */}
-      <motion.a
+
+      {/* <motion.a
         href="https://wa.me/6370029944" // Replace with your number
         target="_blank"
         rel="noopener noreferrer"
@@ -29,10 +31,13 @@ const ScrollToTop = () => {
         className="backdrop-blur-md bg-white/30 dark:bg-white/10 border border-black/10 dark:border-white/20 shadow-xl rounded-2xl p-3 transition-transform duration-300"
       >
         <MessageCircle className="w-6 h-6 text-black dark:text-white" />
-      </motion.a>
-
+      </motion.a> */}
+      <BubbleChat
+        chatflowid="71ed63cd-042f-4d45-ad8a-f31678102bdf"
+        apiHost="https://cloud.flowiseai.com"
+      />
       {/* Scroll to Top Button (Visible on scroll) */}
-      {showArrow && (
+      {/* {showArrow && (
         <motion.button
           onClick={scrollToTop}
           initial={{ opacity: 0, y: 30 }}
@@ -43,7 +48,7 @@ const ScrollToTop = () => {
         >
           <ArrowUp className="w-6 h-6 text-black dark:text-white" />
         </motion.button>
-      )}
+      )} */}
     </div>
   );
 };
