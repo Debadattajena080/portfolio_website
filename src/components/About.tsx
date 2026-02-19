@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import myPhoto from "../assets/myPhoto.png";
 
 const responsive = {
   desktop: {
@@ -111,11 +112,7 @@ const About: React.FC = () => {
             variants={itemVariants}
           >
             <div className="relative z-10 rounded-lg overflow-hidden shadow-xl">
-              <img
-                src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                alt="Golam Morsed"
-                className="w-full h-auto"
-              />
+              <img src={myPhoto} alt="Golam Morsed" className="w-full h-auto" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-40 h-40 bg-primary-500/20 rounded-full blur-xl z-0"></div>
             <div className="absolute -top-4 -left-4 w-40 h-40 bg-secondary-500/20 rounded-full blur-xl z-0"></div>
@@ -123,7 +120,7 @@ const About: React.FC = () => {
 
           <motion.div className="md:col-span-7" variants={itemVariants}>
             <h3 className="text-2xl font-bold mb-4">
-              Web Developer & UI/UX Designer
+              Genenative AI Enthusiast & Full-Stack Developer
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
               Hello! I'm Debadatta Jena, a passionate Web Developer and UI/UX
@@ -152,7 +149,7 @@ const About: React.FC = () => {
           </motion.div>
         </motion.div>
 
-        <div className="relative mt-10 lg:px-8">
+        <div className="relative mt-10 lg:px-8 ">
           <Carousel
             responsive={responsive}
             infinite={true}
